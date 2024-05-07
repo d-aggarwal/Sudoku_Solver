@@ -2,10 +2,11 @@ package board;
 import java.util.*;
 import triplet.Triplets;
 public class Board {
-    int size;
-    int [][] board ;
+  public  int size;
+  public  int [][] board ;
 
  public    Board(int size) {
+     this.size = size;
         this.board = new int [size][size];
     }
 
@@ -14,7 +15,7 @@ public class Board {
             for(int j=0;j<this.size;j++) {
                 System.out.print(board[i][j] +" ");
             }
-            System.out.println();
+            System.out.println(" ");
         }
 
 

@@ -2,10 +2,13 @@ import board.Board;
 import player.Player;
 import java.util.*;
 import triplet.Triplets;
+import game.Game;
 
 public class App {
     public static void main(String[] args) {
-            Board b = new Board(9);
+        Player p = new Player();
+
+        Board b = new Board(9);
         List<Triplets> triple = new ArrayList<>();
         triple.add(new Triplets(0,0,3));
         triple.add(new Triplets(0,2,6));
@@ -29,7 +32,11 @@ public class App {
         triple.add(new Triplets(8,2,5));
 
 b.setBoardTriplet(triple);
-b.printBoard();
+p.setPlayerName("Drishti");
+Game g = new Game(b,p);
+g.play();
+
+
 
 
     }
